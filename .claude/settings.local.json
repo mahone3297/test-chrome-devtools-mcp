@@ -10,7 +10,20 @@
       "Bash(dir:*)",
       "Bash(mkdir:*)",
       "Bash(git init:*)",
-      "Bash(git add:*)"
+      "Bash(git add:*)",
+      "Bash(git commit:*)",
+      "Bash(tasklist:*)",
+      "Bash(findstr:*)",
+      "Bash(claude mcp)",
+      "Bash(claude mcp add:*)",
+      "Bash(claude mcp list:*)",
+      "Bash(claude mcp remove:*)",
+      "Bash(claude mcp get:*)",
+      "Bash(npx chrome-devtools-mcp@latest:*)",
+      "Bash(start chrome \"https://github.com\")",
+      "Bash(timeout:*)",
+      "mcp__chrome-devtools__fill",
+      "mcp__chrome-devtools__wait_for"
     ],
     "deny": [],
     "ask": []
