@@ -1,0 +1,612 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Google DevFest Workshop - Chrome DevTools MCP Server</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&family=Noto+Sans+SC:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header class="header">
+        <nav class="nav">
+            <div class="nav-container">
+                <div class="logo">
+                    <div class="logo-img">
+                        <span class="material-icons">celebration</span>
+                    </div>
+                    <span class="logo-text">DevFest Workshop</span>
+                </div>
+                <ul class="nav-menu">
+                    <li><a href="#home" class="nav-link active">首页</a></li>
+                    <li><a href="#gdg" class="nav-link">关于 GDG</a></li>
+                    <li><a href="#devtools" class="nav-link">DevTools MCP</a></li>
+                    <li><a href="#about" class="nav-link">关于我</a></li>
+                </ul>
+                <div class="hamburger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section id="home" class="section active">
+            <div class="container">
+                <div class="hero">
+                    <div class="hero-content">
+                        <div class="badge">
+                            <span class="material-icons">event</span>
+                            Google DevFest 2025 Workshop
+                        </div>
+                        <h1 class="hero-title">
+                            Chrome DevTools MCP Server
+                            <span class="highlight">开启 Web 开发新纪元</span>
+                        </h1>
+                        <p class="hero-description">
+                            探索如何使用 MCP (Model Context Protocol) 与 Chrome DevTools 深度集成，
+                            打造更智能、更高效的 Web 开发工作流。
+                        </p>
+                        <div class="hero-stats">
+                            <div class="stat">
+                                <span class="stat-number">∞</span>
+                                <span class="stat-label">开发可能性</span>
+                            </div>
+                            <div class="stat">
+                                <span class="stat-number">2025</span>
+                                <span class="stat-label">Workshop 年份</span>
+                            </div>
+                            <div class="stat">
+                                <span class="stat-number">100%</span>
+                                <span class="stat-label">实用技术</span>
+                            </div>
+                        </div>
+                        <div class="hero-buttons">
+                            <button class="btn btn-primary" onclick="navigateToSection('devtools')">
+                                <span class="material-icons">rocket_launch</span>
+                                探索 DevTools MCP
+                            </button>
+                            <button class="btn btn-secondary" onclick="navigateToSection('gdg')">
+                                <span class="material-icons">groups</span>
+                                了解 GDG 社区
+                            </button>
+                        </div>
+                    </div>
+                    <div class="hero-visual">
+                        <div class="browser-mockup">
+                            <div class="browser-header">
+                                <div class="browser-controls">
+                                    <span class="dot red"></span>
+                                    <span class="dot yellow"></span>
+                                    <span class="dot green"></span>
+                                </div>
+                                <div class="browser-title">Chrome DevTools + MCP</div>
+                            </div>
+                            <div class="browser-content">
+                                <div class="code-editor">
+                                    <div class="code-line">
+                                        <span class="line-number">1</span>
+                                        <span class="keyword">const</span> mcp = <span class="keyword">new</span> <span class="function">MCPConnection</span>();
+                                    </div>
+                                    <div class="code-line">
+                                        <span class="line-number">2</span>
+                                        <span class="keyword">await</span> mcp.<span class="function">connect</span>(<span class="string">'chrome-devtools'</span>);
+                                    </div>
+                                    <div class="code-line">
+                                        <span class="line-number">3</span>
+                                        mcp.<span class="function">onElementClick</span>((element) => {
+                                    </div>
+                                    <div class="code-line">
+                                        <span class="line-number">4</span>
+                                      <span class="comment">// 智能代码生成与调试</span>
+                                    </div>
+                                    <div class="code-line">
+                                        <span class="line-number">5</span>
+                                      <span class="keyword">return</span> <span class="function">generateOptimizedCode</span>(element);
+                                    </div>
+                                    <div class="code-line">
+                                        <span class="line-number">6</span>
+                                    });
+                                    </div>
+                                </div>
+                                <div class="floating-icons">
+                                    <div class="floating-icon" style="--delay: 0s;">
+                                        <span class="material-icons">auto_awesome</span>
+                                    </div>
+                                    <div class="floating-icon" style="--delay: 1s;">
+                                        <span class="material-icons">code</span>
+                                    </div>
+                                    <div class="floating-icon" style="--delay: 2s;">
+                                        <span class="material-icons">speed</span>
+                                    </div>
+                                    <div class="floating-icon" style="--delay: 3s;">
+                                        <span class="material-icons">psychology</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="features">
+                    <h2 class="section-title">Workshop 核心内容</h2>
+                    <div class="feature-grid">
+                        <div class="feature-card">
+                            <div class="feature-icon">
+                                <span class="material-icons">integration_instructions</span>
+                            </div>
+                            <h3>MCP 协议深度解析</h3>
+                            <p>理解 Model Context Protocol 的核心概念，学习如何与 AI 模型进行高效的上下文交互。</p>
+                        </div>
+                        <div class="feature-card">
+                            <div class="feature-icon">
+                                <span class="material-icons">developer_mode</span>
+                            </div>
+                            <h3>Chrome DevTools 扩展</h3>
+                            <p>探索如何扩展 Chrome DevTools 功能，实现智能化的代码调试和性能优化。</p>
+                        </div>
+                        <div class="feature-card">
+                            <div class="feature-icon">
+                                <span class="material-icons">smart_toy</span>
+                            </div>
+                            <h3>AI 辅助开发</h3>
+                            <p>利用 AI 能力自动化代码生成、错误修复和性能分析，提升开发效率。</p>
+                        </div>
+                        <div class="feature-card">
+                            <div class="feature-icon">
+                                <span class="material-icons">rocket_launch</span>
+                            </div>
+                            <h3>实战项目演示</h3>
+                            <p>通过实际项目案例，展示 DevTools MCP 在真实开发场景中的应用价值。</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="gdg" class="section">
+            <div class="container">
+                <div class="section-header">
+                    <div class="badge">
+                        <span class="material-icons">groups</span>
+                        关于社区
+                    </div>
+                    <h2 class="section-title">Google Developer Groups (GDG)</h2>
+                    <p class="section-description">
+                        GDG 是 Google 开发者社区的全球性组织，为开发者提供学习、交流和成长的平台
+                    </p>
+                </div>
+
+                <div class="content-grid">
+                    <div class="content-left">
+                        <h3>什么是 GDG？</h3>
+                        <p>
+                            Google Developer Groups (GDG) 是面向开发者的社区团体，致力于推广 Google 技术，
+                            包括 Android、Web、云技术、机器学习等领域。GDG 通过举办技术分享会、工作坊、
+                            hackathon 等活动，为开发者提供学习和交流的平台。
+                        </p>
+
+                        <h3>什么是 DevFest？</h3>
+                        <p>
+                            DevFest (Developers Festival) 是 GDG 社区年度最重要的技术盛会，
+                            汇聚全球开发者，分享最新的技术趋势、最佳实践和创新项目。
+                            这是开发者们展示才华、学习新知识、拓展人脉的绝佳机会。
+                        </p>
+
+                        <div class="highlights">
+                            <div class="highlight-item">
+                                <span class="material-icons">public</span>
+                                <div>
+                                    <strong>全球社区</strong>
+                                    <p>覆盖 140+ 国家，1000+ 社区</p>
+                                </div>
+                            </div>
+                            <div class="highlight-item">
+                                <span class="material-icons">school</span>
+                                <div>
+                                    <strong>学习成长</strong>
+                                    <p>最新技术分享与实践</p>
+                                </div>
+                            </div>
+                            <div class="highlight-item">
+                                <span class="material-icons">handshake</span>
+                                <div>
+                                    <strong>人脉拓展</strong>
+                                    <p>结识志同道合的开发者</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="content-right">
+                        <div class="visual-card">
+                            <div class="visual-header">
+                                <span class="material-icons">celebration</span>
+                                <h3>加入 GDG 社区</h3>
+                            </div>
+                            <div class="visual-content">
+                                <p>成为 GDG 社区的一员，你将获得：</p>
+                                <ul>
+                                    <li>🎯 最新技术资讯和教程</li>
+                                    <li>👥 与行业专家面对面交流</li>
+                                    <li>🚀 参与开源项目机会</li>
+                                    <li>🎁 Google 技术资源和支持</li>
+                                    <li>🏆 参与 DevFest 等大型活动</li>
+                                </ul>
+                                <button class="btn btn-primary">
+                                    <span class="material-icons">explore</span>
+                                    探索本地 GDG
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="devtools" class="section">
+            <div class="container">
+                <div class="section-header">
+                    <div class="badge">
+                        <span class="material-icons">developer_mode</span>
+                        技术专题
+                    </div>
+                    <h2 class="section-title">Chrome DevTools MCP Server</h2>
+                    <p class="section-description">
+                        探索如何通过 MCP 协议，让 Chrome DevTools 与 AI 模型深度集成
+                    </p>
+                </div>
+
+                <div class="tech-showcase">
+                    <div class="demo-area">
+                        <div class="browser-demo">
+                            <div class="demo-header">
+                                <h3>MCP 工作流程演示</h3>
+                                <div class="demo-controls">
+                                    <button class="demo-btn" onclick="runDemo()">
+                                        <span class="material-icons">play_arrow</span>
+                                        运行演示
+                                    </button>
+                                </div>
+                            </div>
+                            <div class="demo-content" id="demo-content">
+                                <div class="demo-step">
+                                    <div class="step-number">1</div>
+                                    <div class="step-content">
+                                        <h4>连接 MCP Server</h4>
+                                        <p>建立与 Chrome DevTools 的 MCP 连接</p>
+                                        <div class="code-snippet">
+                                            <code>const mcp = new MCPClient('chrome-devtools');</code>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="demo-step">
+                                    <div class="step-number">2</div>
+                                    <div class="step-content">
+                                        <h4>获取页面信息</h4>
+                                        <p>实时获取页面结构和样式信息</p>
+                                        <div class="code-snippet">
+                                            <code>const snapshot = await mcp.takeSnapshot();</code>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="demo-step">
+                                    <div class="step-number">3</div>
+                                    <div class="step-content">
+                                        <h4>AI 智能分析</h4>
+                                        <p>AI 分析页面并提供优化建议</p>
+                                        <div class="code-snippet">
+                                            <code>const suggestions = await ai.analyze(snapshot);</code>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="demo-step">
+                                    <div class="step-number">4</div>
+                                    <div class="step-content">
+                                        <h4>自动执行操作</h4>
+                                        <p>根据 AI 建议自动优化页面</p>
+                                        <div class="code-snippet">
+                                            <code>await mcp.applyChanges(suggestions);</code>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="features-list">
+                        <div class="feature-item">
+                            <div class="feature-icon-large">
+                                <span class="material-icons">auto_fix_high</span>
+                            </div>
+                            <h4>智能代码生成</h4>
+                            <p>基于页面上下文自动生成优化代码，提升开发效率</p>
+                        </div>
+                        <div class="feature-item">
+                            <div class="feature-icon-large">
+                                <span class="material-icons">bug_report</span>
+                            </div>
+                            <h4>自动化调试</h4>
+                            <p>AI 辅助发现和修复代码问题，减少调试时间</p>
+                        </div>
+                        <div class="feature-item">
+                            <div class="feature-icon-large">
+                                <span class="material-icons">speed</span>
+                            </div>
+                            <h4>性能优化</h4>
+                            <p>实时分析页面性能，提供个性化优化建议</p>
+                        </div>
+                        <div class="feature-item">
+                            <div class="feature-icon-large">
+                                <span class="material-icons">accessibility_new</span>
+                            </div>
+                            <h4>无障碍检测</h4>
+                            <p>自动检测和修复无障碍问题，提升用户体验</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="code-example">
+                    <h3>实际应用示例</h3>
+                    <div class="code-tabs">
+                        <button class="tab-btn active" onclick="switchTab(this, 'mcp-client')">MCP 客户端</button>
+                        <button class="tab-btn" onclick="switchTab(this, 'devtools-integration')">DevTools 集成</button>
+                        <button class="tab-btn" onclick="switchTab(this, 'ai-analysis')">AI 分析</button>
+                    </div>
+                    <div class="code-content">
+                        <div class="tab-content active" id="mcp-client">
+                            <pre><code class="language-javascript">// MCP 客户端初始化
+const mcp = new ChromeDevToolsMCP({
+    endpoint: 'ws://localhost:9222/devtools/browser',
+    autoConnect: true
+});
+
+// 监听页面变化
+mcp.on('pageChange', async (snapshot) => {
+    const analysis = await analyzePage(snapshot);
+    console.log('页面分析结果:', analysis);
+});
+
+// 执行智能操作
+await mcp.executeCommand('optimizeImages', {
+    quality: 80,
+    format: 'webp'
+});</code></pre>
+                        </div>
+                        <div class="tab-content" id="devtools-integration">
+                            <pre><code class="language-javascript">// DevTools 面板集成
+class DevToolsMCPPanel {
+    constructor() {
+        this.mcpClient = new MCPClient();
+        this.setupUI();
+    }
+
+    async analyzeElement(element) {
+        const snapshot = await this.mcpClient.takeSnapshot();
+        const elementInfo = snapshot.findElement(element);
+
+        const suggestions = await this.mcpClient.getAISuggestions({
+            element: elementInfo,
+            context: 'accessibility'
+        });
+
+        this.displaySuggestions(suggestions);
+    }
+
+    applySuggestion(suggestion) {
+        return this.mcpClient.applyChange(suggestion);
+    }
+}</code></pre>
+                        </div>
+                        <div class="tab-content" id="ai-analysis">
+                            <pre><code class="language-javascript">// AI 分析引擎
+class PageAnalyzer {
+    async analyzeAccessibility(snapshot) {
+        const issues = [];
+
+        // 检查无障碍属性
+        snapshot.elements.forEach(element => {
+            if (element.tag === 'img' && !element.alt) {
+                issues.push({
+                    type: 'missing-alt',
+                    element: element,
+                    severity: 'warning',
+                    suggestion: '添加有意义的 alt 属性'
+                });
+            }
+
+            if (element.tag === 'button' && !element.ariaLabel) {
+                issues.push({
+                    type: 'missing-aria-label',
+                    element: element,
+                    severity: 'error',
+                    suggestion: '添加 aria-label 属性'
+                });
+            }
+        });
+
+        return {
+            score: this.calculateScore(issues),
+            issues: issues,
+            improvements: this.generateImprovements(issues)
+        };
+    }
+}</code></pre>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="about" class="section">
+            <div class="container">
+                <div class="section-header">
+                    <div class="badge">
+                        <span class="material-icons">person</span>
+                        个人介绍
+                    </div>
+                    <h2 class="section-title">从零开始学AI</h2>
+                    <p class="section-description">
+                        热爱技术的 AI 开发工程师，专注于将前沿技术转化为实际应用
+                    </p>
+                </div>
+
+                <div class="profile-container">
+                    <div class="profile-main">
+                        <div class="profile-card">
+                            <div class="profile-avatar">
+                                <div class="avatar-placeholder">
+                                    <span class="material-icons">smart_toy</span>
+                                </div>
+                            </div>
+                            <div class="profile-info">
+                                <h3>从零开始学AI</h3>
+                                <p class="profile-title">AI 开发工程师</p>
+                                <div class="profile-bio">
+                                    <p>
+                                        🚀 热爱写代码，享受从零开始创造的过程<br>
+                                        💡 喜欢做项目，将想法变为现实<br>
+                                        🤖 专注于 AI 技术的开发与应用<br>
+                                        📚 持续学习，探索技术的无限可能
+                                    </p>
+                                </div>
+                                <div class="profile-contact">
+                                    <button class="btn btn-primary" onclick="showContact()">
+                                        <span class="material-icons">chat</span>
+                                        联系我
+                                    </button>
+                                    <div class="contact-info" id="contact-info" style="display: none;">
+                                        <p>
+                                            <span class="material-icons">public</span>
+                                            微信公众号：从零开始学AI
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="profile-details">
+                        <div class="skills-section">
+                            <h3>技术栈</h3>
+                            <div class="skills-grid">
+                                <div class="skill-item">
+                                    <span class="material-icons">psychology</span>
+                                    <span>人工智能</span>
+                                </div>
+                                <div class="skill-item">
+                                    <span class="material-icons">code</span>
+                                    <span>前端开发</span>
+                                </div>
+                                <div class="skill-item">
+                                    <span class="material-icons">storage</span>
+                                    <span>后端开发</span>
+                                </div>
+                                <div class="skill-item">
+                                    <span class="material-icons">cloud</span>
+                                    <span>云计算</span>
+                                </div>
+                                <div class="skill-item">
+                                    <span class="material-icons">memory</span>
+                                    <span>机器学习</span>
+                                </div>
+                                <div class="skill-item">
+                                    <span class="material-icons">api</span>
+                                    <span>API 开发</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="projects-section">
+                            <h3>项目经验</h3>
+                            <div class="project-timeline">
+                                <div class="timeline-item">
+                                    <div class="timeline-marker"></div>
+                                    <div class="timeline-content">
+                                        <h4>AI 代码助手</h4>
+                                        <p>基于大语言模型的智能代码生成工具</p>
+                                        <span class="timeline-date">2025</span>
+                                    </div>
+                                </div>
+                                <div class="timeline-item">
+                                    <div class="timeline-marker"></div>
+                                    <div class="timeline-content">
+                                        <h4>Chrome DevTools MCP</h4>
+                                        <p>本次 Workshop 主题项目</p>
+                                        <span class="timeline-date">2025</span>
+                                    </div>
+                                </div>
+                                <div class="timeline-item">
+                                    <div class="timeline-marker"></div>
+                                    <div class="timeline-content">
+                                        <h4>智能数据分析平台</h4>
+                                        <p>企业级数据处理与可视化解决方案</p>
+                                        <span class="timeline-date">2023</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="interests-section">
+                            <h3>兴趣爱好</h3>
+                            <div class="interests-list">
+                                <div class="interest-item">
+                                    <span class="material-icons">laptop</span>
+                                    <span>编程开发</span>
+                                </div>
+                                <div class="interest-item">
+                                    <span class="material-icons">auto_awesome</span>
+                                    <span>AI 探索</span>
+                                </div>
+                                <div class="interest-item">
+                                    <span class="material-icons">school</span>
+                                    <span>技术学习</span>
+                                </div>
+                                <div class="interest-item">
+                                    <span class="material-icons">groups</span>
+                                    <span>技术分享</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4>DevFest Workshop 2025</h4>
+                    <p>探索 Chrome DevTools MCP Server 的无限可能</p>
+                </div>
+                <div class="footer-section">
+                    <h4>快速链接</h4>
+                    <ul>
+                        <li><a href="#home">首页</a></li>
+                        <li><a href="#gdg">关于 GDG</a></li>
+                        <li><a href="#devtools">DevTools MCP</a></li>
+                        <li><a href="#about">关于我</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>联系方式</h4>
+                    <p>
+                        <span class="material-icons">chat</span>
+                        微信公众号：从零开始学AI
+                    </p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Google DevFest Workshop. Made with ❤️ by 从零开始学AI</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
